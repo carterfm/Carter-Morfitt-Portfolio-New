@@ -1,0 +1,84 @@
+:root {
+    /*Laying out the colors I'll use to style the app. I'll be using variables for these
+    for the sake of convenience.*/
+    --dark: #31343d;
+    --light-blue: #92cccd;
+    --grey-blue: #475b79; 
+    --off-white: #ededf6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+}
+
+header h1 {
+    flex: 0 0 400px;
+    padding: 10px 20px;
+    background-color: var(--light-blue);
+    color: var(--dark);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+header nav a {
+    display: inline;
+
+    font-size: 1.25rem;
+    color: var(--light-blue);
+    margin-right: .5rem;
+
+    text-decoration-thickness: 0.2rem;
+}
+
+header nav a:hover, header nav a:focus, header nav a:active {
+    color: white;
+}
+
+main {
+    margin-top: 0px;
+    background-color: var(--off-white);
+    color: var(--grey-blue);
+}
+
+main aside h1 {
+    font-weight: bolder;
+}
+
+.jumbotron {
+    background-image: url("../images/patrick-tomasso-QMDap1TAu0g-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-bottom: 0px;
+}
+
+.jumbotron .container {
+    display: flex; 
+    justify-content: end;
+}
+
+.jumbotron .container .lead {
+    /* display: inline-block ensures that this element is no larger than its contents */
+    display: inline-block;
+    background-color: var(--light-blue);
+
+    font-size: 1.5rem;
+    color: var(--dark);
+}
+
+#about-me p {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 767px){
+    .jumbotron .container {
+        justify-content: center;
+    }
+}
