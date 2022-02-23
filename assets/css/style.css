@@ -50,6 +50,16 @@ main aside h1 {
     font-weight: bolder;
 }
 
+main a {
+    color: var(--grey-blue);
+
+    text-decoration-thickness: 0.2rem;
+}
+
+main a:hover, main a:focus, main a:active {
+    color: var(--light-blue);
+}
+
 .jumbotron {
     background-image: url("../images/patrick-tomasso-QMDap1TAu0g-unsplash.jpg");
     background-size: cover;
@@ -73,12 +83,101 @@ main aside h1 {
     color: var(--dark);
 }
 
+.main-content {
+    border-left: 0.2rem solid var(--grey-blue);
+}
+
+.project-holder {
+    border: 0.2rem;
+    border-style: solid;
+    border-color: var(--light-blue);
+
+    position: relative;
+}
+
+.image-holder {
+    opacity: 50%;
+    /* margin: 0; */
+    margin-top: 10px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-holder:hover, .image-holder:active, .image-holder:focus {
+    opacity: 100%;
+}
+
+.project-title {
+    background-color: var(--light-blue);
+    display: inline-block;
+
+    color: var(--dark);
+    padding: 10px;
+    max-width: 50%;
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.text-holder a {
+    font-size: 1.5rem;
+}
+
 #about-me p {
     font-size: 1.25rem;
+}
+
+/* #main-project {
+    display: flex;
+    justify-content:center;
+} */
+
+#main-project .image-holder {
+    height: 250px;
+    /* margin: 0; */
+    background-image: url("https://i.imgur.com/FiNwVSM.jpeg");
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+#other-projects .image-holder {
+    height: 150px;
+}
+
+#other-1 {
+    background-image: url("https://camo.githubusercontent.com/8e24df195f9b8bf41ca11e36348ca650f9632ecbb2b65ddd99f717515330ffd1/68747470733a2f2f692e696d6775722e636f6d2f306850453979382e706e67");
+}
+
+#other-2 {
+    background-image: url("https://camo.githubusercontent.com/d868c304fbd8ee0d7284f9dbea92be8bd7ce995f36700885c7db4b84aaf0a7e1/68747470733a2f2f692e696d6775722e636f6d2f766432506136682e706e67");
+}
+
+#other-3 {
+    background-image: url("https://camo.githubusercontent.com/410543f8f1f0e7d7f2808d39cb3ea861472f1bcfb4a910a3fa70809537971be4/68747470733a2f2f692e696d6775722e636f6d2f7446396e3145722e706e67");
+}
+
+#other-4 {
+    background-image: url("https://camo.githubusercontent.com/2bf9d4eb60052e486c5e7e1fd3d4567c64fd2db73ca19c4d0fcfa867f64d7c5c/68747470733a2f2f692e696d6775722e636f6d2f3864644439747a2e706e67");
 }
 
 @media screen and (max-width: 767px){
     .jumbotron .container {
         justify-content: center;
     }
+
+    main aside {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content {
+        border-left: none;
+        padding-top: 10px;
+        border-top: 0.2rem solid var(--grey-blue);
+    }
 }
+
