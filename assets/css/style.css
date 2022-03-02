@@ -89,24 +89,17 @@ main a:hover, main a:focus, main a:active {
 
 .project-holder {
     border: 0.2rem;
-    border-style: solid;
+    cursor: pointer;
     border-color: var(--light-blue);
-
-    position: relative;
 }
 
 .image-holder {
-    opacity: 50%;
     /* margin: 0; */
-    margin-top: 10px;
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.image-holder:hover, .image-holder:active, .image-holder:focus {
-    opacity: 100%;
+    position: relative;
 }
 
 .project-title {
@@ -114,16 +107,26 @@ main a:hover, main a:focus, main a:active {
     display: inline-block;
 
     color: var(--dark);
-    padding: 10px;
+    padding: 2px 5px;
     max-width: 50%;
 
     position: absolute;
-    top: 5%;
-    left: 5%;
+    top: 20px;
+    left: 20px;
+}
+
+/* display is set to none by default; revealed when project is clicked on */
+.text-holder {
+    display: none;
+    background-color: #d9d9de;
+}
+
+.text-holder ul {
+    margin-bottom: 0;
 }
 
 .text-holder a {
-    font-size: 1.5rem;
+    font-size: 1.5rem
 }
 
 #about-me p {
@@ -139,9 +142,6 @@ main a:hover, main a:focus, main a:active {
     height: 250px;
     /* margin: 0; */
     background-image: url("https://i.imgur.com/FiNwVSM.jpeg");
-    /* background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
 }
 
 #other-projects .image-holder {
@@ -162,6 +162,18 @@ main a:hover, main a:focus, main a:active {
 
 #other-4 {
     background-image: url("https://camo.githubusercontent.com/2bf9d4eb60052e486c5e7e1fd3d4567c64fd2db73ca19c4d0fcfa867f64d7c5c/68747470733a2f2f692e696d6775722e636f6d2f3864644439747a2e706e67");
+}
+
+#contact-me a {
+    /* margin-top: 20px; */
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--grey-blue);
+    text-decoration-thickness: 0.2rem;
+}
+
+#contact-me a:hover, #contact-me a:focus, #contact-me a:active {
+    color: var(--light-blue);
 }
 
 @media screen and (max-width: 767px){
